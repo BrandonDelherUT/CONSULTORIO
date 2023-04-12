@@ -17,18 +17,18 @@ public class PacienteService {
     private PacienteRepository repository;
 
     @Transactional(readOnly = true)
-    public CustomResponse<List<Paciente>> getAll(){
+    public CustomResponse<List<Paciente>> getAll() {
         List<Paciente> pacientes = this.repository.findAll();
-        if(pacientes.isEmpty()){
+        if (pacientes.isEmpty()) {
             return new CustomResponse<>(null, true, 204, "No se encontraron pacientes..");
         }
         return new CustomResponse<>(pacientes, false, 200, "Son todos los pacientes.");
     }
 
     @Transactional(readOnly = true)
-    public CustomResponse<Paciente> getOne(int id){
+    public CustomResponse<Paciente> getOne(int id) {
         Optional<Paciente> optionalPaciente = this.repository.findById(id);
-        if(!optionalPaciente.isPresent()){
+        if (!optionalPaciente.isPresent()) {
             return new CustomResponse<>(null, true, 404, "No se encontro el paciente...");
         }
         Paciente paciente = optionalPaciente.get();
@@ -36,8 +36,8 @@ public class PacienteService {
     }
 
     @Transactional
-    public CustomResponse<Paciente> insert(Paciente paciente){
-        if(this.repository.existsById(paciente.getId())){
+    public CustomResponse<Paciente> insert(Paciente paciente) {
+        if (this.repository.existsById(paciente.getId())) {
             return new CustomResponse<>(null, true, 400, "El ID de la paciente ya existe");
         }
         Paciente pacienteSave = this.repository.save(paciente);

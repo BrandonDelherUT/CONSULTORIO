@@ -1,54 +1,40 @@
-import React from 'react'
-import {Container, Row, Col} from 'react-bootstrap'
+import React, { Component } from 'react';
+import axios from 'axios';
+import { DataTable } from 'primereact/datatable';
+import { Column } from 'primereact/column';
 
-export const Medico = () => {
-  return (
-    <>
-    <Container className='px-3 mt-3'>
-      <h2 className='text-start fw-lighter' style={{ color: "#002e60" }}>Medicos registrados</h2>
-      <br />
-      <div className="">
-        <Row className="m-0">
-          <Col className='col-lg-1 fw-semibold text-primary text-opacity-80'>
-            ID
-          </Col>
-          <Col className='col-lg-4 fw-semibold text-primary text-opacity-80'>
-            Nombre
-          </Col>
-          <Col className='col-lg-4 fw-semibold text-primary text-opacity-80'>
-            Apellidos
-          </Col>
-          <Col className='col-lg-2 fw-semibold text-primary text-opacity-80'>
-            Sexo
-          </Col>
-          <Col className='col-lg-1 fw-semibold text-primary text-opacity-80'>
-            Edad
-          </Col>
-        </Row>
-        <hr />
-        <Row className="m-0">
-          <Col className='col-lg-1 fw-light text-body text-opacity-80'>
-            1
-          </Col>
-          <Col className='col-lg-4 fw-light text-body text-opacity-80'>
-            Ana Belen
-          </Col>
-          <Col className='col-lg-4 fw-light text-body text-opacity-80'>
-            Perez Perez
-          </Col>
-          <Col className='col-lg-2 fw-light text-body text-opacity-80'>
-            Femenino
-          </Col>
-          <Col className='col-lg-1 fw-light text-body text-opacity-80'>
-            30
-          </Col>
-        </Row>
-        <hr />
-        
+class Medico extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      medicos: []
+    };
+  }
+
+  componentDidMount() {
+    axios.get('http://localhost:8080/medico/get')
+      .then(res => {
+        this.setState({ medicos: res.data.data });
+      })
+      .catch(error => {
+        console.log(error);
+      });
+  }
+
+  render() {
+    const { medicos } = this.state;
+    return (
+      <div className="card">
+        <DataTable value={medicos} className="p-datatable-gridlines">
+          <Column field="id" header="Id" />
+          <Column field="nombre" header="Nombre" />
+          <Column field="apellidos" header="Apellido" />
+          <Column field="sexo" header="Sexo" />
+          <Column field="edad" header="Edad" />
+        </DataTable>
       </div>
-    </Container>
-  </>
-  )
+    );
+  }
 }
 
-export default Medico
+export default Medico;
