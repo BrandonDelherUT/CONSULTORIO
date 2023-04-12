@@ -24,7 +24,7 @@ class Paciente extends Component {
   render() {
     const { pacientes } = this.state;
     return (
-      <div className="card">
+      <div className="card mt-3">
         <DataTable value={pacientes} className="p-datatable-gridlines">
           <Column field="id" header="Id" />
           <Column field="nombre" header="Nombre" />

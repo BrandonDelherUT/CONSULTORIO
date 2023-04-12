@@ -24,7 +24,7 @@ class Preescripcion extends Component {
   render() {
     const { preescripciones } = this.state;
     return (
-      <div className="card">
+      <div className="card mt-3">
         <DataTable value={preescripciones} className="p-datatable-gridlines">
           <Column field="id" header="Id" />
           <Column field="fechaPrescripcion" header="Fecha" />
@@ -32,7 +32,8 @@ class Preescripcion extends Component {
           <Column field="duracionTratamiento" header="Duración" />
           <Column field="indicaciones" header="Indicaciones" />
           <Column field="paciente.nombre" header="Paciente" />
-          <Column field="medico.nombre" header="Médico" />
+          <Column field="consultorio.medico.nombre" header="Médico" />
+          <Column field="consultorio.id" header="No. Consultorio" />
         </DataTable>
       </div>
     );

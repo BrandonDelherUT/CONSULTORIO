@@ -5,6 +5,7 @@ import { AiFillMedicineBox } from 'react-icons/ai'
 import { BsPersonWorkspace } from 'react-icons/bs'
 import { SiReadthedocs } from 'react-icons/si'
 import { FaUserFriends } from 'react-icons/fa'
+import { RiHospitalFill } from 'react-icons/ri'
 import { NavLink } from 'react-router-dom'
 
 export const AsideA = () => {
@@ -26,6 +27,9 @@ export const AsideA = () => {
             </Row>
             <Row className='pb-2'>
                 <NavLink style={{ textDecoration: 'none', color: 'black' }} className='pt-1 px-3' to="/usuario"><FaUserFriends size={"35"} color="#002e60" />&nbsp; Usuario </NavLink>
+            </Row>
+            <Row className='pb-2'>
+                <NavLink style={{ textDecoration: 'none', color: 'black' }} className='pt-1 px-3' to="/consultorio"><RiHospitalFill size={"35"} color="#002e60" />&nbsp; Consultorio </NavLink>
             </Row>
         </>
     )

@@ -8,6 +8,7 @@ import Medico from '../medico/Medico';
 import Paciente from '../paciente/Paciente';
 import Preescripcion from '../preescripcion/Preescripcion';
 import Usuario from '../usuario/Usuario';
+import Consultorio from '../consultorio/Consultorio';
 
 export const Home = () => {
     return (
@@ -31,6 +32,7 @@ export const Home = () => {
                                 <Route path="/paciente" element={<Paciente/>}></Route> {/* <h1>INDICADORES </h1> */}
                                 <Route path="/preescripcion" element={<Preescripcion/>}></Route> {/*<h1>Candidates, dataTable</h1>*/}
                                 <Route path="/usuario" element={<Usuario/>}></Route> {/* <h1>Personal certificador, misma tabla de candidates</h1> */}
+                                <Route path="/consultorio" element={<Consultorio/>}></Route> {/* <h1>Personal certificador, misma tabla de candidates</h1> */}
                             </Routes>
                         </section>
                     </Col>

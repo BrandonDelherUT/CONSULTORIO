@@ -24,13 +24,14 @@ class Medico extends Component {
   render() {
     const { medicos } = this.state;
     return (
-      <div className="card">
+      <div className="card  mt-3">
         <DataTable value={medicos} className="p-datatable-gridlines">
           <Column field="id" header="Id" />
           <Column field="nombre" header="Nombre" />
           <Column field="apellidos" header="Apellido" />
           <Column field="sexo" header="Sexo" />
           <Column field="edad" header="Edad" />
+          <Column field="especialidad" header="Especialidad" />
         </DataTable>
       </div>
     );
