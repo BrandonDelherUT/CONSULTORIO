@@ -31,8 +31,8 @@ class Paciente extends Component {
           <Column field="apellidos" header="Apellido" />
           <Column field="numeroSeguro" header="Número de Seguro" />
           <Column field="sexo" header="Sexo" />
-          <Column field="alturaMetros" header="Altura" />
-          <Column field="pesoKg" header="Peso" />
+          <Column field="alturaMetros" header="Altura (Mts)" />
+          <Column field="pesoKg" header="Peso (Kg)" />
           <Column field="edad" header="Edad" />
         </DataTable>
       </div>

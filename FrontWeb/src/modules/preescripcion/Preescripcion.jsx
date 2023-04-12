@@ -28,6 +28,7 @@ class Preescripcion extends Component {
         <DataTable value={preescripciones} className="p-datatable-gridlines">
           <Column field="id" header="Id" />
           <Column field="fechaPrescripcion" header="Fecha" />
+          <Column field="medicina.nombre" header="Medicamento" />
           <Column field="duracionTratamiento" header="Duración" />
           <Column field="indicaciones" header="Indicaciones" />
           <Column field="paciente.nombre" header="Paciente" />
