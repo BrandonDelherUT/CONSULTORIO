@@ -12,7 +12,7 @@ import org.springframework.data.mongodb.repository.config.EnableMongoRepositorie
 public class ConfiguracionMongoDB {
     @Bean
     public MongoClient mongoClient(){
-        return MongoClients.create("mongodb://localhost:27017/consultorio");
+        return MongoClients.create("mongodb+srv://root:root@hospital.ygtkwrg.mongodb.net/test");
     }
 
     @Bean

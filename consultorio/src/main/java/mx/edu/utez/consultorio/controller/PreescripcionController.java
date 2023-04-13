@@ -13,12 +13,12 @@ import javax.validation.Valid;
 import java.util.List;
 
 @RestController
-@RequestMapping("/preescripcion")
+@RequestMapping("/hospital/prescripcion")
 public class PreescripcionController {
     @Autowired
     private PreescripcionService service;
 
-    @GetMapping("/get")
+    @GetMapping("/")
     public ResponseEntity<CustomResponse<List<Preescripcion>>> getAll(){
         System.out.println("GET ALL Preescripcion");
         return new ResponseEntity<>(
@@ -27,7 +27,7 @@ public class PreescripcionController {
         );
     }
 
-    @GetMapping("/get/{id}")
+    @GetMapping("/{id}")
     public ResponseEntity<CustomResponse<Preescripcion>> getOne(@PathVariable int id){
         System.out.println("GET ONE Preescripcion");
         return new ResponseEntity<>(
@@ -36,7 +36,7 @@ public class PreescripcionController {
         );
     }
 
-    @PostMapping("/post")
+    @PostMapping("/")
     public ResponseEntity<CustomResponse<Preescripcion>> insert(@Valid @RequestBody Preescripcion preescripcion){
         System.out.println("INSERT Preescripion");
         return  new ResponseEntity<>(
@@ -45,7 +45,7 @@ public class PreescripcionController {
         );
     }
 
-    @PutMapping("/put/{id}")
+    @PutMapping("/{id}")
     public ResponseEntity<CustomResponse<Preescripcion>> update(@PathVariable int id, @Valid @RequestBody Preescripcion preescripcion){
         System.out.println(" PUT Preescripion");
         return new ResponseEntity<>(
@@ -54,7 +54,7 @@ public class PreescripcionController {
         );
     }
 
-    @DeleteMapping("/delete/{id}")
+    @DeleteMapping("/{id}")
     public ResponseEntity<CustomResponse<String>> delete(@PathVariable int id){
         System.out.println("DELETE Preescripion");
         return new ResponseEntity<>(

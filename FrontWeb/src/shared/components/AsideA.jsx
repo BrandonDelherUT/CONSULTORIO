@@ -14,22 +14,22 @@ export const AsideA = () => {
             <Nav className='px-3 py-2 mt-3 text-center'><h4 style={{ color: "#002e60" }}>Registros</h4></Nav>
             <hr className='mt-1' />
             <Row className='pb-2'>
-                <NavLink style={{ textDecoration: 'none', color: 'black' }} className='pt-1 px-3' to="/medicina"><GiMedicines size={"35"} color="#002e60" />&nbsp; Medicina</NavLink>
+                <NavLink style={{ textDecoration: 'none', color: 'black' }} className='pt-1 px-3' to="/hospital/medicina"><GiMedicines size={"35"} color="#002e60" />&nbsp; Medicina</NavLink>
             </Row>
             <Row className='pb-2'>
-                <NavLink style={{ textDecoration: 'none', color: 'black' }} className='pt-1 px-3' to="/medico"><AiFillMedicineBox size={"35"} color="#002e60" />&nbsp; Médico </NavLink>
+                <NavLink style={{ textDecoration: 'none', color: 'black' }} className='pt-1 px-3' to="/hospital/medico"><AiFillMedicineBox size={"35"} color="#002e60" />&nbsp; Médico </NavLink>
             </Row>
             <Row className='pb-2'>
-                <NavLink style={{ textDecoration: 'none', color: 'black' }} className='pt-1 px-3' to="/paciente"><BsPersonWorkspace size={"35"} color="#002e60" />&nbsp; Paciente </NavLink>
+                <NavLink style={{ textDecoration: 'none', color: 'black' }} className='pt-1 px-3' to="/hospital/paciente"><BsPersonWorkspace size={"35"} color="#002e60" />&nbsp; Paciente </NavLink>
             </Row>
             <Row className='pb-2'>
-                <NavLink style={{ textDecoration: 'none', color: 'black' }} className='pt-1 px-3' to="/preescripcion"><SiReadthedocs size={"35"} color="#002e60" />&nbsp; Preescripción </NavLink>
+                <NavLink style={{ textDecoration: 'none', color: 'black' }} className='pt-1 px-3' to="/hospital/preescripcion"><SiReadthedocs size={"35"} color="#002e60" />&nbsp; Preescripción </NavLink>
             </Row>
             <Row className='pb-2'>
-                <NavLink style={{ textDecoration: 'none', color: 'black' }} className='pt-1 px-3' to="/usuario"><FaUserFriends size={"35"} color="#002e60" />&nbsp; Usuario </NavLink>
+                <NavLink style={{ textDecoration: 'none', color: 'black' }} className='pt-1 px-3' to="/hospital/usuario"><FaUserFriends size={"35"} color="#002e60" />&nbsp; Usuario </NavLink>
             </Row>
             <Row className='pb-2'>
-                <NavLink style={{ textDecoration: 'none', color: 'black' }} className='pt-1 px-3' to="/consultorio"><RiHospitalFill size={"35"} color="#002e60" />&nbsp; Consultorio </NavLink>
+                <NavLink style={{ textDecoration: 'none', color: 'black' }} className='pt-1 px-3' to="/hospital/consultorio"><RiHospitalFill size={"35"} color="#002e60" />&nbsp; Consultorio </NavLink>
             </Row>
         </>
     )

@@ -27,12 +27,12 @@ export const Home = () => {
                     <Col className="col-lg-10 col-md-9 col-sm-9 square border border-bottom-0 m-0">
                         <section className="container-fluid">
                             <Routes>
-                                <Route path="/medicina" element={<Medicina/>}/>
-                                <Route path="/medico" element={<Medico/>} />
-                                <Route path="/paciente" element={<Paciente/>}></Route> {/* <h1>INDICADORES </h1> */}
-                                <Route path="/preescripcion" element={<Preescripcion/>}></Route> {/*<h1>Candidates, dataTable</h1>*/}
-                                <Route path="/usuario" element={<Usuario/>}></Route> {/* <h1>Personal certificador, misma tabla de candidates</h1> */}
-                                <Route path="/consultorio" element={<Consultorio/>}></Route> {/* <h1>Personal certificador, misma tabla de candidates</h1> */}
+                                <Route path="/hospital/medicina" element={<Medicina/>}/>
+                                <Route path="/hospital/medico" element={<Medico/>} />
+                                <Route path="/hospital/paciente" element={<Paciente/>}></Route> {/* <h1>INDICADORES </h1> */}
+                                <Route path="/hospital/preescripcion" element={<Preescripcion/>}></Route> {/*<h1>Candidates, dataTable</h1>*/}
+                                <Route path="/hospital/usuario" element={<Usuario/>}></Route> {/* <h1>Personal certificador, misma tabla de candidates</h1> */}
+                                <Route path="/hospital/consultorio" element={<Consultorio/>}></Route> {/* <h1>Personal certificador, misma tabla de candidates</h1> */}
                             </Routes>
                         </section>
                     </Col>

@@ -12,7 +12,7 @@
 	<artifactId>consultorio</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>consultorio</name>
-	<description>El proyecto integrador del profe Carsi; un consultorio.</description>
+	<description>El proyecto integrador del profe Carsi; un hospital.</description>
 	<properties>
 		<java.version>11</java.version>
 	</properties>
@@ -30,6 +30,13 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.mongodb/mongodb-driver-sync -->
+		<dependency>
+			<groupId>org.mongodb</groupId>
+			<artifactId>mongodb-driver-sync</artifactId>
+			<version>4.6.1</version>
 		</dependency>
 
 		<dependency>
