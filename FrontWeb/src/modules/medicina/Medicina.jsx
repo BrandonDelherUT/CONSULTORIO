@@ -12,7 +12,7 @@ class Medicina extends Component {
   }
 
   componentDidMount() {
-    axios.get('http://localhost:8080/medicina/get')
+    axios.get('http://localhost:8080/hospital/medicina/')
       .then(res => {
         this.setState({ medicinas: res.data.data });
       })

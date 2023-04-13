@@ -12,7 +12,7 @@ class Usuario    extends Component {
     }
 
     componentDidMount(){
-        axios.get('http://localhost:8080/usuario/get')
+        axios.get('http://localhost:8080/hospital/usuario/')
         .then(res => {
             this.setState({ usuarios: res.data.data });
         })
@@ -28,7 +28,6 @@ class Usuario    extends Component {
                 <DataTable value={usuarios} className='p-datatable-gridlines'>
                     <Column field='id' header="Id" />
                     <Column field='username' header="Username" />
-                    <Column field='password' header="Password" />
                     <Column field='role' header="Role" />
                 </DataTable>
             </div>
