@@ -12,7 +12,7 @@ class Preescripcion extends Component {
   }
 
   componentDidMount() {
-    axios.get('http://localhost:8080/hospital/preescripcion/')
+    axios.get('http://localhost:8080/hospital/prescripcion/')
       .then(res => {
         this.setState({ preescripciones: res.data.data });
       })
@@ -32,7 +32,7 @@ class Preescripcion extends Component {
           <Column field="duracionTratamiento" header="Duración" />
           <Column field="indicaciones" header="Indicaciones" />
           <Column field="paciente.nombre" header="Paciente" />
-          <Column field="consultorio.medico.nombre" header="Médico" />
+          <Column field="medico.nombre" header="Médico" />
           <Column field="consultorio.id" header="No. Consultorio" />
         </DataTable>
       </div>
