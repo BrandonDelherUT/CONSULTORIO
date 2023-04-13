@@ -13,12 +13,12 @@ import javax.validation.Valid;
 import java.util.List;
 
 @RestController
-@RequestMapping("/usuario")
+@RequestMapping("/hospital/usuario")
 public class UsuarioController {
     @Autowired
     private UsuarioService service;
 
-    @GetMapping("/get")
+    @GetMapping("/")
     public ResponseEntity<CustomResponse<List<Usuario>>> getAll(){
         System.out.println("GET ALL Usuario");
         return new ResponseEntity<>(
@@ -27,7 +27,7 @@ public class UsuarioController {
         );
     }
 
-    @GetMapping("/get/{id}")
+    @GetMapping("/{id}")
     public ResponseEntity<CustomResponse<Usuario>> getOne(@PathVariable int id){
         System.out.println("GET ONE Usuario");
         return new ResponseEntity<>(
@@ -36,7 +36,7 @@ public class UsuarioController {
         );
     }
 
-    @PostMapping("/post")
+    @PostMapping("/")
     public ResponseEntity<CustomResponse<Usuario>> insert(@Valid @RequestBody Usuario usuario){
         System.out.println("INSERT Usuario");
         return new ResponseEntity<>(
@@ -45,7 +45,7 @@ public class UsuarioController {
         );
     }
 
-    @PutMapping("/put/{id}")
+    @PutMapping("/{id}")
     public ResponseEntity<CustomResponse<Usuario>> update(@PathVariable int id, @Valid @RequestBody Usuario usuario){
         System.out.println("PUT Usuario");
         return new ResponseEntity<>(
@@ -54,7 +54,7 @@ public class UsuarioController {
         );
     }
 
-    @DeleteMapping("/delete/{id}")
+    @DeleteMapping("/{id}")
     public ResponseEntity<CustomResponse<String>> delete(@PathVariable int id){
         System.out.println("DELETE Usuario");
         return new ResponseEntity<>(
